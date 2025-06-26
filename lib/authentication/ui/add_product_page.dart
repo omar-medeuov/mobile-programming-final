@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:https_project/news/news_page.dart';
 
 class AddProductPage extends StatefulWidget {
   @override
@@ -76,6 +77,11 @@ class _AddProductPageState extends State<AddProductPage> {
                   final String id = productIdController.text;
                   final String price = productPriceController.text;
                   final String? category = selectedCategory;
+
+                  Navigator.push(
+  context,
+  MaterialPageRoute(builder: (context) => NewsPage()),
+);
 
                   if (name.isEmpty ||
                       id.isEmpty ||

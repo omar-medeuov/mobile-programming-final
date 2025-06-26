@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'registration_page.dart';
+import 'add_product_page.dart';
 
 class CitySelectionPage extends StatelessWidget {
   @override
