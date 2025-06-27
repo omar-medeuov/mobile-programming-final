@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:https_project/animation/animation_page.dart';
 import 'package:https_project/news/news_page.dart';
+import 'package:https_project/post/post_page.dart';
 
 class AddProductPage extends StatefulWidget {
   @override
@@ -72,6 +74,24 @@ class _AddProductPageState extends State<AddProductPage> {
               ),
               const SizedBox(height: 30),
               ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => AnimationPage()),
+                    );
+                  },
+                  child: Text("Animation")),
+              const SizedBox(height: 30),
+              ElevatedButton(
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => PostPage()),
+                    );
+                  },
+                  child: Text("New Post")),
+              const SizedBox(height: 30),
+              ElevatedButton(
                 onPressed: () {
                   final String name = productNameController.text;
                   final String id = productIdController.text;
@@ -79,9 +99,9 @@ class _AddProductPageState extends State<AddProductPage> {
                   final String? category = selectedCategory;
 
                   Navigator.push(
-  context,
-  MaterialPageRoute(builder: (context) => NewsPage()),
-);
+                    context,
+                    MaterialPageRoute(builder: (context) => NewsPage()),
+                  );
 
                   if (name.isEmpty ||
                       id.isEmpty ||
